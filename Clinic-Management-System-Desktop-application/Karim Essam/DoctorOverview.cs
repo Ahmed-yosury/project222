@@ -62,8 +62,8 @@ namespace Clinic_Management_System_Desktop_application.Karim_Essam
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Patient patient = new Patient();
-            patient.Show();
+            Session session = new Session();
+            session.Show();
             this.Hide();
         }
 

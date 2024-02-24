@@ -65,6 +65,7 @@ namespace Clinic_Management_System_Desktop_application.Ahmed_yosury
         {
             //Getappointment();
             Getdata();
+            IvaildPhone.Visible = false;
             Ivaildaddreess.Visible = false;
             IvaildAge.Visible = false;
             IvaildAge.Visible = false;

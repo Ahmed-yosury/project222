@@ -27,6 +27,17 @@ namespace Clinic_Management_System_Desktop_application
             {
                 NameValue.Items.Add(item.PatientName);
             }
+            
+            var mi = clinicDB.Prescriptions.Select(s => s.PrescriptionName);
+            foreach (var item in mi)
+            {
+                comboBox1.Items.Add(item);
+            }
+
+            var x= comboBox1.Text;
+
+            var mo = clinicDB.Prescriptions.Where(a=>a.PrescriptionName==x).Select(s=>s.PrescriptionNotes).FirstOrDefault();
+            textBox8.Text= mo;
 
 
         }
@@ -45,6 +56,26 @@ namespace Clinic_Management_System_Desktop_application
 
         private void button1_Click(object sender, EventArgs e)
         {
+        //    string pationtName = NameValue.SelectedItem.ToString();
+        //    var data = clinicDB.Patients.Where(o => o.PatientName == pationtName).FirstOrDefault();
+
+        //    if (data != null)
+        //    {
+        //        data.done = true;
+        //        clinicDB.SaveChanges();
+        //    }
+        //    DoctorOverview doctor = new DoctorOverview();
+        //    doctor.Show();
+        //    this.Hide();
+        }
+
+        private void phonedata_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
             string pationtName = NameValue.SelectedItem.ToString();
             var data = clinicDB.Patients.Where(o => o.PatientName == pationtName).FirstOrDefault();
 
@@ -55,6 +86,13 @@ namespace Clinic_Management_System_Desktop_application
             }
             DoctorOverview doctor = new DoctorOverview();
             doctor.Show();
+            this.Hide();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            DoctorOverview doctorOverview = new DoctorOverview();
+            doctorOverview.Show();
             this.Hide();
         }
     }
