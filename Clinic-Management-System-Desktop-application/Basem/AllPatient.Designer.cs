@@ -126,6 +126,7 @@
             this.ClientSize = new System.Drawing.Size(970, 483);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "AllPatient";
             this.Text = "AllPatient";
             this.Load += new System.EventHandler(this.Patient_Load);

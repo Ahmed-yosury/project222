@@ -300,6 +300,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.searchTextBox);
             this.Controls.Add(this.dataGridView);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Medicien";
             this.Text = "Medicien";
             this.Load += new System.EventHandler(this.Medicien_Load);

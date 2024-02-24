@@ -1,4 +1,5 @@
-﻿using Clinic_Management_System_Desktop_application.Karim_Essam;
+﻿using Clinic_Management_System_Desktop_application.Ahmed_yosury;
+using Clinic_Management_System_Desktop_application.Karim_Essam;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace Clinic_Management_System_Desktop_application
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Medicien());
+            Application.Run(new Session());
         }
     }
 }

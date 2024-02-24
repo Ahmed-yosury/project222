@@ -37,13 +37,13 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Logout = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.Colecion = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.Waiting = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
+            this.Done = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
@@ -67,17 +67,17 @@
             // 
             // panel1
             // 
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(191)))), ((int)(((byte)(243)))));
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.panel2);
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
             // panel6
             // 
+            resources.ApplyResources(this.panel6, "panel6");
             this.panel6.BackColor = System.Drawing.Color.White;
             this.panel6.Controls.Add(this.pictureBox2);
-            resources.ApplyResources(this.panel6, "panel6");
             this.panel6.Name = "panel6";
             // 
             // pictureBox2
@@ -88,16 +88,16 @@
             // 
             // panel2
             // 
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(191)))), ((int)(((byte)(243)))));
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.Logout);
-            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.WhiteSmoke;
             resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             this.pictureBox1.UseWaitCursor = true;
@@ -110,16 +110,16 @@
             // 
             // panel3
             // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.label1);
             resources.ApplyResources(this.panel3, "panel3");
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.Colecion);
+            this.panel3.Controls.Add(this.label1);
             this.panel3.Name = "panel3";
             // 
-            // label2
+            // Colecion
             // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.Name = "label2";
+            resources.ApplyResources(this.Colecion, "Colecion");
+            this.Colecion.Name = "Colecion";
             // 
             // label1
             // 
@@ -128,18 +128,18 @@
             // 
             // panel4
             // 
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.label4);
             resources.ApplyResources(this.panel4, "panel4");
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel4.Controls.Add(this.Waiting);
+            this.panel4.Controls.Add(this.label4);
             this.panel4.Name = "panel4";
             // 
-            // label3
+            // Waiting
             // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.ForeColor = System.Drawing.Color.DarkTurquoise;
-            this.label3.Name = "label3";
+            resources.ApplyResources(this.Waiting, "Waiting");
+            this.Waiting.BackColor = System.Drawing.Color.White;
+            this.Waiting.ForeColor = System.Drawing.Color.DarkTurquoise;
+            this.Waiting.Name = "Waiting";
             // 
             // label4
             // 
@@ -150,17 +150,17 @@
             // 
             // panel5
             // 
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel5.Controls.Add(this.label5);
-            this.panel5.Controls.Add(this.label6);
             resources.ApplyResources(this.panel5, "panel5");
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel5.Controls.Add(this.Done);
+            this.panel5.Controls.Add(this.label6);
             this.panel5.Name = "panel5";
             // 
-            // label5
+            // Done
             // 
-            resources.ApplyResources(this.label5, "label5");
-            this.label5.ForeColor = System.Drawing.Color.Green;
-            this.label5.Name = "label5";
+            resources.ApplyResources(this.Done, "Done");
+            this.Done.ForeColor = System.Drawing.Color.Green;
+            this.Done.Name = "Done";
             // 
             // label6
             // 
@@ -170,36 +170,40 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             resources.ApplyResources(this.dataGridView1, "dataGridView1");
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Name = "dataGridView1";
             // 
             // button1
             // 
-            this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             resources.ApplyResources(this.button1, "button1");
+            this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.Name = "button1";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
+            resources.ApplyResources(this.button2, "button2");
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            resources.ApplyResources(this.button2, "button2");
             this.button2.ForeColor = System.Drawing.Color.Black;
             this.button2.Name = "button2";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
+            resources.ApplyResources(this.button3, "button3");
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(191)))), ((int)(((byte)(243)))));
             this.button3.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            resources.ApplyResources(this.button3, "button3");
             this.button3.ForeColor = System.Drawing.Color.Black;
             this.button3.Name = "button3";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // entityCommand1
             // 
@@ -276,13 +280,13 @@
         private System.Windows.Forms.Label Logout;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label Colecion;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label Waiting;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label Done;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;

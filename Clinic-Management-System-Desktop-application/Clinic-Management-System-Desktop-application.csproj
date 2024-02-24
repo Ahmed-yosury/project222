@@ -56,6 +56,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminOverview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminOverview.Designer.cs">
+      <DependentUpon>AdminOverview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ahmed yosury\AddPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ahmed yosury\AddPatient.Designer.cs">
+      <DependentUpon>AddPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ahmed yosury\Receptionist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ahmed yosury\Receptionist.Designer.cs">
+      <DependentUpon>Receptionist.cs</DependentUpon>
+    </Compile>
     <Compile Include="Basem\AllPatient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,12 +91,6 @@
     <Compile Include="Karim Essam\Entity\Patient.cs" />
     <Compile Include="Karim Essam\Entity\Prescription.cs" />
     <Compile Include="Karim Essam\Entity\Staff.cs" />
-    <Compile Include="Karim Essam\Patient.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Karim Essam\Patient.Designer.cs">
-      <DependentUpon>Patient.cs</DependentUpon>
-    </Compile>
     <Compile Include="Basem\Medicien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,23 +101,51 @@
     <Compile Include="Migrations\202402232130589_CreateDB.Designer.cs">
       <DependentUpon>202402232130589_CreateDB.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202402240024359_ClinicDB.cs" />
+    <Compile Include="Migrations\202402240024359_ClinicDB.designer.cs">
+      <DependentUpon>202402240024359_ClinicDB.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Karim Essam\Session.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Karim Essam\Session.Designer.cs">
+      <DependentUpon>Session.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdminOverview.resx">
+      <DependentUpon>AdminOverview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ahmed yosury\AddPatient.resx">
+      <DependentUpon>AddPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ahmed yosury\Receptionist.en-US.resx">
+      <DependentUpon>Receptionist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ahmed yosury\Receptionist.resx">
+      <DependentUpon>Receptionist.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Basem\AllPatient.resx">
       <DependentUpon>AllPatient.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Karim Essam\DoctorOverview.resx">
+    <EmbeddedResource Include="Karim Essam\DoctorOverview.en-UM.resx">
       <DependentUpon>DoctorOverview.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Karim Essam\Patient.resx">
-      <DependentUpon>Patient.cs</DependentUpon>
+    <EmbeddedResource Include="Karim Essam\DoctorOverview.en-US.resx">
+      <DependentUpon>DoctorOverview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Karim Essam\DoctorOverview.resx">
+      <DependentUpon>DoctorOverview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Basem\Medicien.resx">
       <DependentUpon>Medicien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202402232130589_CreateDB.resx">
       <DependentUpon>202402232130589_CreateDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202402240024359_ClinicDB.resx">
+      <DependentUpon>202402240024359_ClinicDB.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -116,6 +156,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Karim Essam\Session.resx">
+      <DependentUpon>Session.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

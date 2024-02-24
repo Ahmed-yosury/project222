@@ -30,6 +30,7 @@ namespace database_test
         public int PatientAge { get; set; }
 
         public string PatientMaritalStatus { get; set; }
+        public bool done {  get; set; }
 
         public DateTime appointments { get; set; }
 
