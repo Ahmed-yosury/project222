@@ -101,12 +101,14 @@
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             this.pictureBox1.UseWaitCursor = true;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Logout
             // 
             resources.ApplyResources(this.Logout, "Logout");
             this.Logout.ForeColor = System.Drawing.SystemColors.Desktop;
             this.Logout.Name = "Logout";
+            this.Logout.Click += new System.EventHandler(this.label9_Click);
             // 
             // panel3
             // 

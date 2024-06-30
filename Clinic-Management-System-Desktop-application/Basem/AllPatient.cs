@@ -1,4 +1,6 @@
-﻿using database_test;
+﻿using Clinic_Management_System_Desktop_application.Karim_Essam;
+using Clinic_Management_System_Desktop_application.Safa;
+using database_test;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -57,5 +59,25 @@ namespace Clinic_Management_System_Desktop_application
             }
         }
 
+        private void label9_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Hide();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Hide();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            DoctorOverview doctor=new DoctorOverview();
+            doctor.Show();
+            this.Hide();
+        }
     }
 }

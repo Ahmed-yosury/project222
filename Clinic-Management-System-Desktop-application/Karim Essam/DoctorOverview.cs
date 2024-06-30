@@ -1,4 +1,5 @@
-﻿using database_test;
+﻿using Clinic_Management_System_Desktop_application.Safa;
+using database_test;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,7 +29,7 @@ namespace Clinic_Management_System_Desktop_application.Karim_Essam
         }
         public void Getdata()
         {
-            var pathiontdata = clinicDB.Patients.Where(e=>e.done==false).Select(e => new
+            var pathiontdata = clinicDB.Patients.Where(e => e.done == false && e.appointments.Day == DateTime.Today.Day).Select(e => new
             {
                 id = e.PatientId,
                 name = e.PatientName,
@@ -40,16 +41,16 @@ namespace Clinic_Management_System_Desktop_application.Karim_Essam
                 Appointment = e.appointments
             }).ToList();
             dataGridView1.DataSource = pathiontdata;
+
         }
         public void Doneornot()
         {
-            var colection=clinicDB.Patients.Select(e=> new {id=e.PatientId}).Count();
-            var done =clinicDB.Patients.Count(e=>e.done == true);
-            var notdone= clinicDB.Patients.Count(e => e.done == false);
-            Colecion.Text=colection.ToString();
+            var colection = clinicDB.Patients.Where(e => e.appointments.Day == DateTime.Today.Day).Select(e => new { id = e.PatientId }).Count();
+            var done = clinicDB.Patients.Where(e => e.appointments.Day == DateTime.Today.Day).Count(e => e.done == true);
+            var notdone = clinicDB.Patients.Where(e => e.appointments.Day == DateTime.Today.Day).Count(e => e.done == false);
+            Colecion.Text = colection.ToString();
             Waiting.Text = notdone.ToString();
-            Done.Text=done.ToString();
-
+            Done.Text = done.ToString();
         }
 
         private void DoctorOverview_Load(object sender, EventArgs e)
@@ -82,6 +83,18 @@ namespace Clinic_Management_System_Desktop_application.Karim_Essam
             this.Hide();
         }
 
-        
+        private void label9_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Hide();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Hide();
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using database_test;
+﻿using Clinic_Management_System_Desktop_application.Safa;
+using database_test;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -76,7 +77,17 @@ namespace Clinic_Management_System_Desktop_application.Ahmed_yosury
 
         private void Save_Click(object sender, EventArgs e)
         {
-            int x = int.Parse(AgeValue.Text);
+            bool ah=false;
+            var a = PhoneValue.Text;
+            foreach (var item in a)
+            {
+                if(!char.IsDigit(item))
+                {
+                    ah = true;
+                }
+                
+            }
+          
             if (NameValue.Text == "" || NameValue.Text.Length < 2)
             {
                 IvaildName.Visible = true;
@@ -85,7 +96,7 @@ namespace Clinic_Management_System_Desktop_application.Ahmed_yosury
             {
                 IvaildName.Visible = false;
             }
-            if (x > 0)
+            if (int.Parse(AgeValue.Text) > 0)
             {
                 IvaildAge.Visible = false;
             }
@@ -93,7 +104,7 @@ namespace Clinic_Management_System_Desktop_application.Ahmed_yosury
             {
                 IvaildAge.Visible = true;
             }
-            if (PhoneValue.Text.Length == 11)
+            if (PhoneValue.Text.Length == 11|| ah==false)
             {
                 IvaildPhone.Visible = false;
             }
@@ -123,7 +134,7 @@ namespace Clinic_Management_System_Desktop_application.Ahmed_yosury
             {
                 clinicDB.Patients.Add(patient);
                 clinicDB.SaveChanges();
-                MessageBox.Show($"the patient{NameValue.Text} is add sussefuly");
+                MessageBox.Show($"the patient {NameValue.Text} is add sussefuly");
             }
             else
             {
@@ -137,6 +148,16 @@ namespace Clinic_Management_System_Desktop_application.Ahmed_yosury
 
         private void button3_Click(object sender, EventArgs e)
         {
+            bool ah = false;
+            var a = PhoneValue.Text;
+            foreach (var item in a)
+            {
+                if (!char.IsDigit(item))
+                {
+                    ah = true;
+                }
+
+            }
             if (NameValue.Text == "" || NameValue.Text.Length > 2)
             {
                 IvaildName.Visible = true;
@@ -153,7 +174,7 @@ namespace Clinic_Management_System_Desktop_application.Ahmed_yosury
             {
                 IvaildAge.Visible = false;
             }
-            if (PhoneValue.Text.Length == 11)
+            if (PhoneValue.Text.Length == 11||ah==false)
             {
                 IvaildPhone.Visible = false;
             }
@@ -185,7 +206,7 @@ namespace Clinic_Management_System_Desktop_application.Ahmed_yosury
             {
                 clinicDB.Entry(patient).State = EntityState.Modified;
                 clinicDB.SaveChanges();
-                MessageBox.Show($"the patient{NameValue.Text} is Updte sussefuly");
+                MessageBox.Show($"the patient {NameValue.Text} is Updte sussefuly");
 
 
             }
@@ -194,7 +215,7 @@ namespace Clinic_Management_System_Desktop_application.Ahmed_yosury
                 MessageBox.Show("invaild data");
             }
 
-
+             
             Getdata();
             Clear();
 
@@ -235,6 +256,27 @@ namespace Clinic_Management_System_Desktop_application.Ahmed_yosury
                 AddAppointmentValue.Text = patient.appointments.ToString();
                 GenderValue.Text = patient.PatientGender;
             }
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Receptionist patient = new Receptionist();
+            patient.Show();
+            this.Hide();
+        }
+
+        private void Logout_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Hide();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Hide();
         }
     }
 }

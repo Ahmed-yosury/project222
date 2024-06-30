@@ -18,7 +18,9 @@ namespace Clinic_Management_System_Desktop_application
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DoctorOverview());
+          // Application.Run(new DoctorOverview());
+            Application.Run(new Receptionist());
+
         }
     }
 }

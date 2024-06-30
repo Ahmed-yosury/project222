@@ -68,41 +68,42 @@
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.InitialImage = null;
             this.pictureBox3.Location = new System.Drawing.Point(1004, 15);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(94, 38);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 16;
             this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click_1);
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Lime;
             this.button1.Font = new System.Drawing.Font("Yu Gothic UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(266, 528);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(163, 46);
             this.button1.TabIndex = 15;
             this.button1.Text = "Save";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.button1.Click += new System.EventHandler(this.button1_Click_2);
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(425, 303);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(226, 24);
             this.comboBox1.TabIndex = 14;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // textBox8
             // 
             this.textBox8.BackColor = System.Drawing.Color.White;
             this.textBox8.Location = new System.Drawing.Point(679, 303);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox8.Margin = new System.Windows.Forms.Padding(4);
             this.textBox8.Multiline = true;
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(419, 276);
@@ -123,7 +124,7 @@
             // 
             this.textBox7.BackColor = System.Drawing.Color.White;
             this.textBox7.Location = new System.Drawing.Point(266, 63);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(4);
             this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(832, 208);
@@ -159,7 +160,7 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.panel1.Location = new System.Drawing.Point(0, -2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(233, 599);
             this.panel1.TabIndex = 9;
@@ -168,18 +169,18 @@
             // 
             this.NameValue.FormattingEnabled = true;
             this.NameValue.Location = new System.Drawing.Point(14, 154);
-            this.NameValue.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.NameValue.Margin = new System.Windows.Forms.Padding(4);
             this.NameValue.Name = "NameValue";
             this.NameValue.Size = new System.Drawing.Size(212, 24);
             this.NameValue.TabIndex = 15;
-            this.NameValue.SelectedIndexChanged += new System.EventHandler(this.NameValue_SelectedIndexChanged);
+            this.NameValue.SelectedIndexChanged += new System.EventHandler(this.NameValue_SelectedIndexChanged_1);
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
             this.panel6.Controls.Add(this.pictureBox2);
             this.panel6.Location = new System.Drawing.Point(0, 2);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(233, 80);
             this.panel6.TabIndex = 7;
@@ -188,7 +189,7 @@
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(27, -21);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(190, 128);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -198,7 +199,7 @@
             // maritaldata
             // 
             this.maritaldata.Location = new System.Drawing.Point(14, 431);
-            this.maritaldata.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.maritaldata.Margin = new System.Windows.Forms.Padding(4);
             this.maritaldata.Name = "maritaldata";
             this.maritaldata.Size = new System.Drawing.Size(212, 24);
             this.maritaldata.TabIndex = 14;
@@ -217,7 +218,7 @@
             // agedata
             // 
             this.agedata.Location = new System.Drawing.Point(14, 373);
-            this.agedata.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.agedata.Margin = new System.Windows.Forms.Padding(4);
             this.agedata.Name = "agedata";
             this.agedata.Size = new System.Drawing.Size(212, 24);
             this.agedata.TabIndex = 12;
@@ -236,7 +237,7 @@
             // genderdata
             // 
             this.genderdata.Location = new System.Drawing.Point(14, 318);
-            this.genderdata.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.genderdata.Margin = new System.Windows.Forms.Padding(4);
             this.genderdata.Name = "genderdata";
             this.genderdata.Size = new System.Drawing.Size(212, 24);
             this.genderdata.TabIndex = 10;
@@ -255,7 +256,7 @@
             // addressdata
             // 
             this.addressdata.Location = new System.Drawing.Point(14, 263);
-            this.addressdata.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addressdata.Margin = new System.Windows.Forms.Padding(4);
             this.addressdata.Name = "addressdata";
             this.addressdata.Size = new System.Drawing.Size(212, 24);
             this.addressdata.TabIndex = 8;
@@ -274,7 +275,7 @@
             // phonedata
             // 
             this.phonedata.Location = new System.Drawing.Point(14, 208);
-            this.phonedata.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.phonedata.Margin = new System.Windows.Forms.Padding(4);
             this.phonedata.Name = "phonedata";
             this.phonedata.Size = new System.Drawing.Size(212, 24);
             this.phonedata.TabIndex = 6;
@@ -308,7 +309,7 @@
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.Logout);
             this.panel2.Location = new System.Drawing.Point(0, 524);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(233, 71);
             this.panel2.TabIndex = 2;
@@ -320,7 +321,7 @@
             this.pictureBox1.Enabled = false;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(43, 6);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(40, 62);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -329,6 +330,7 @@
             this.pictureBox1.UseWaitCursor = true;
             this.pictureBox1.Visible = false;
             this.pictureBox1.WaitOnLoad = true;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Logout
             // 
@@ -341,6 +343,7 @@
             this.Logout.Size = new System.Drawing.Size(78, 28);
             this.Logout.TabIndex = 1;
             this.Logout.Text = "Logout";
+            this.Logout.Click += new System.EventHandler(this.label9_Click);
             // 
             // Session
             // 
@@ -356,7 +359,7 @@
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Session";
             this.Text = "Session";
             this.Load += new System.EventHandler(this.Patient_Load);

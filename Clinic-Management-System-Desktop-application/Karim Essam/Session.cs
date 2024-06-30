@@ -1,4 +1,5 @@
 ﻿using Clinic_Management_System_Desktop_application.Karim_Essam;
+using Clinic_Management_System_Desktop_application.Safa;
 using database_test;
 using System;
 using System.Collections.Generic;
@@ -22,7 +23,7 @@ namespace Clinic_Management_System_Desktop_application
 
         private void Patient_Load(object sender, EventArgs e)
         {
-            var pathiontdata = clinicDB.Patients.Where(a => a.done == false).Select(p => p).ToList();
+            var pathiontdata = clinicDB.Patients.Where(a => a.done == false && a.appointments.Day == DateTime.Today.Day).Select(p => p).ToList();
             foreach (var item in pathiontdata)
             {
                 NameValue.Items.Add(item.PatientName);
@@ -34,15 +35,62 @@ namespace Clinic_Management_System_Desktop_application
                 comboBox1.Items.Add(item);
             }
 
-            var x= comboBox1.Text;
 
-            var mo = clinicDB.Prescriptions.Where(a=>a.PrescriptionName==x).Select(s=>s.PrescriptionNotes).FirstOrDefault();
-            textBox8.Text= mo;
+        }
+        public void getmidicen()
+        {
+            var x = comboBox1.Text;
 
+            var mo = clinicDB.Prescriptions.Where(a => a.PrescriptionName == x).Select(s => s.PrescriptionNotes).FirstOrDefault();
+            textBox8.Text = mo;
 
         }
 
         private void NameValue_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void phonedata_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void pictureBox3_Click_1(object sender, EventArgs e)
+        {
+            DoctorOverview doctorOverview = new DoctorOverview();
+            doctorOverview.Show();
+            this.Hide();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            getmidicen();
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+            Login login= new Login();
+            login.Show();
+            this.Hide();
+        }
+
+        private void NameValue_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             string Na = NameValue.SelectedItem.ToString();
             var datapatient = clinicDB.Patients.Where(o => o.PatientName == Na).FirstOrDefault();
@@ -54,27 +102,14 @@ namespace Clinic_Management_System_Desktop_application
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-        //    string pationtName = NameValue.SelectedItem.ToString();
-        //    var data = clinicDB.Patients.Where(o => o.PatientName == pationtName).FirstOrDefault();
-
-        //    if (data != null)
-        //    {
-        //        data.done = true;
-        //        clinicDB.SaveChanges();
-        //    }
-        //    DoctorOverview doctor = new DoctorOverview();
-        //    doctor.Show();
-        //    this.Hide();
+            Login login = new Login();
+            login.Show();
+            this.Hide();
         }
 
-        private void phonedata_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
+        private void button1_Click_2(object sender, EventArgs e)
         {
             string pationtName = NameValue.SelectedItem.ToString();
             var data = clinicDB.Patients.Where(o => o.PatientName == pationtName).FirstOrDefault();
@@ -87,13 +122,7 @@ namespace Clinic_Management_System_Desktop_application
             DoctorOverview doctor = new DoctorOverview();
             doctor.Show();
             this.Hide();
-        }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            DoctorOverview doctorOverview = new DoctorOverview();
-            doctorOverview.Show();
-            this.Hide();
         }
     }
 }

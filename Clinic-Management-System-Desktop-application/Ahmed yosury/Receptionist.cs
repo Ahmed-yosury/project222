@@ -1,4 +1,5 @@
-﻿using database_test;
+﻿using Clinic_Management_System_Desktop_application.Safa;
+using database_test;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,7 +21,7 @@ namespace Clinic_Management_System_Desktop_application.Ahmed_yosury
         }
         public void Getdata()
         {
-            var pathiontdata = clinicDB.Patients.Select(e => new 
+            var pathiontdata = clinicDB.Patients.Where(e => e.done == false && e.appointments.Day == DateTime.Today.Day).Select(e => new
             {
                 id = e.PatientId,
                 name = e.PatientName,
@@ -32,6 +33,7 @@ namespace Clinic_Management_System_Desktop_application.Ahmed_yosury
                 Appointment = e.appointments
             }).ToList();
             dataGridView1.DataSource = pathiontdata;
+
         }
 
 
@@ -63,6 +65,27 @@ namespace Clinic_Management_System_Desktop_application.Ahmed_yosury
             }).ToList();
             dataGridView1.DataSource = SearchR;
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            AppointmentForm  addappointment=new AppointmentForm();
+            addappointment.Show();
+            this.Hide();
+        }
+
+        private void Logout_Click(object sender, EventArgs e)
+        {
+            Login login= new Login();
+            login.Show();
+            this.Hide();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Login login=new Login();
+            login.Show();
+            this.Hide();
         }
     }
 }
